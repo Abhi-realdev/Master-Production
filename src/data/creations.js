@@ -1,0 +1,58 @@
+export const creations = [
+  {
+    id: 1,
+    title: 'Political Perspectives Weekly',
+    description: 'In-depth conversations with leading political figures and policy makers.',
+    image: 'https://images.pexels.com/photos/6115756/pexels-photo-6115756.jpeg',
+    type: 'podcast',
+  },
+  {
+    id: 2,
+    title: 'Administrative Excellence Series',
+    description: 'Behind-the-scenes stories from top government administrators.',
+    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
+    type: 'video',
+  },
+  {
+    id: 3,
+    title: 'Leadership Chronicles',
+    description: 'Inspiring conversations with industry leaders and visionaries.',
+    image: 'https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg',
+    type: 'podcast',
+  },
+  {
+    id: 4,
+    title: 'Policy Makers Roundtable',
+    description: 'Exclusive discussions on current policies and their impact.',
+    image: 'https://images.pexels.com/photos/6114991/pexels-photo-6114991.jpeg',
+    type: 'video',
+  },
+  {
+    id: 5,
+    title: 'Democracy in Action',
+    description: 'Live coverage of major political events and democratic processes.',
+    image: 'https://images.pexels.com/photos/6803516/pexels-photo-6803516.jpeg',
+    type: 'live-event',
+  },
+  {
+    id: 6,
+    title: 'Future of Governance',
+    description: 'Forward-thinking discussions on the evolution of public administration.',
+    image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+    type: 'documentary',
+  },
+  {
+    id: 7,
+    title: 'Voices of Change',
+    description: 'Highlighting influential personalities driving societal transformation.',
+    image: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg',
+    type: 'interview-series',
+  },
+  {
+    id: 8,
+    title: 'Capitol Conversations',
+    description: 'Intimate discussions with lawmakers and political strategists.',
+    image: 'https://images.pexels.com/photos/5650026/pexels-photo-5650026.jpeg',
+    type: 'podcast',
+  },
+];
