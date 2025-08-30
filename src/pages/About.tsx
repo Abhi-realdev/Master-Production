@@ -99,7 +99,7 @@ const About = () => {
             >
               <div className="relative">
                 <img
-                  src="/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
+                  src="/images/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
                   alt="Master's Production Studio"
                   className="w-full h-96 object-cover rounded-2xl shadow-premium"
                   loading="eager"

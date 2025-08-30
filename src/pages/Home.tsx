@@ -79,7 +79,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-elegant">
         <div className="absolute inset-0">
           <img
-            src="/WhatsApp Image 2025-08-10 at 10.43.21 AM.jpeg"
+            src="/images/WhatsApp Image 2025-08-10 at 10.43.21 AM.jpeg"
             alt="Master's Production Studio"
             className="w-full h-full object-cover opacity-20"
             loading="eager"
@@ -364,7 +364,7 @@ const Home = () => {
             >
               <div className="relative">
                 <img
-                  src="/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
+                  src="/images/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
                   alt="Our Studio"
                   className="w-full h-96 object-cover rounded-2xl shadow-premium"
                   loading="lazy"
