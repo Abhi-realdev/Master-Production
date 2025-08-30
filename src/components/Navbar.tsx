@@ -37,7 +37,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-elegant border-b border-neutral-200' 
+          ? 'bg-Grey/95 backdrop-blur-md shadow-elegant border-b border-neutral-200' 
           : 'bg-transparent'
       }`}
     >
@@ -50,10 +50,10 @@ const Navbar = () => {
               transition={{ duration: 0.6 }}
               className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center shadow-elegant"
             >
-              <Mic2 className="w-6 h-6 text-white" />
+              <Mic2 className="w-6 h-6 text-Grey" />
             </motion.div>
             <span className={`text-lg md:text-xl font-heading font-bold tracking-wide group-hover:text-secondary transition-colors duration-300 ${
-              scrolled ? 'text-primary' : 'text-white'
+              scrolled ? 'text-primary' : 'text-Grey'
             }`}>
               Master's Production
             </span>
@@ -69,10 +69,10 @@ const Navbar = () => {
                   location.pathname === item.path
                     ? scrolled 
                       ? 'text-primary bg-gradient-secondary shadow-soft'
-                      : 'text-white bg-white/20 shadow-elegant'
+                      : 'text-Grey bg-Grey/20 shadow-elegant'
                     : scrolled
                       ? 'text-primary/80 hover:text-primary hover:bg-neutral-100'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      : 'text-Grey/80 hover:text-Grey hover:bg-Grey/10'
                 }`}
               >
                 <span className="relative z-10">{item.name}</span>
@@ -80,7 +80,7 @@ const Navbar = () => {
                   <motion.div
                     layoutId="activeTab"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
-                      scrolled ? 'bg-gradient-primary' : 'bg-white'
+                      scrolled ? 'bg-gradient-primary' : 'bg-Grey'
                     }`}
                     initial={false}
                   />
@@ -95,7 +95,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <MessageCircle className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              <MessageCircle className="w-5 h-5 text-Grey group-hover:scale-110 transition-transform duration-300" />
             </motion.button>
           </div>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
             className={`md:hidden p-2 transition-colors duration-300 rounded-lg ${
               scrolled 
                 ? 'text-primary/80 hover:text-primary hover:bg-neutral-100'
-                : 'text-white/80 hover:text-white hover:bg-white/10'
+                : 'text-Grey/80 hover:text-Grey hover:bg-Grey/10'
             }`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -119,7 +119,7 @@ const Navbar = () => {
             height: isOpen ? 'auto' : 0, 
             opacity: isOpen ? 1 : 0 
           }}
-          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-neutral-200"
+          className="md:hidden overflow-hidden bg-Grey/95 backdrop-blur-md border-t border-neutral-200"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
@@ -141,7 +141,7 @@ const Navbar = () => {
                 handleWhatsAppClick();
                 setIsOpen(false);
               }}
-              className="w-full mt-2 p-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-medium flex items-center justify-center space-x-2 transition-all duration-300 shadow-elegant"
+              className="w-full mt-2 p-3 bg-gradient-to-r from-green-500 to-green-600 text-Grey rounded-lg font-medium flex items-center justify-center space-x-2 transition-all duration-300 shadow-elegant"
               whileTap={{ scale: 0.98 }}
             >
               <MessageCircle className="w-5 h-5" />
