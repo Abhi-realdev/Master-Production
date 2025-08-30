@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Sparkles } from 'lucide-react';
 import {
   FaFacebook,
   FaTwitter,
@@ -47,39 +47,75 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-      color: 'from-secondary to-contrast',
+      color: 'from-blue-400 to-purple-500',
     },
     {
       icon: Mail,
       title: 'Email',
       details: ['hello@mastersproduction.com', 'booking@mastersproduction.com'],
-      color: 'from-highlight to-contrast',
+      color: 'from-green-400 to-blue-500',
     },
     {
       icon: MapPin,
       title: 'Address',
       details: ['1234 Media Center Blvd', 'Los Angeles, CA 90210'],
-      color: 'from-contrast to-secondary',
+      color: 'from-pink-400 to-red-400',
     },
     {
       icon: Clock,
       title: 'Office Hours',
       details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM'],
-      color: 'from-secondary to-highlight',
+      color: 'from-yellow-400 to-orange-500',
     },
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, href: '#', label: 'Facebook', color: 'hover:text-blue-500' },
-    { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-blue-400' },
-    { icon: FaInstagram, href: '#', label: 'Instagram', color: 'hover:text-pink-500' },
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon: FaYoutube, href: '#', label: 'YouTube', color: 'hover:text-red-500' },
-    { icon: FaSpotify, href: '#', label: 'Spotify', color: 'hover:text-green-500' },
+    { 
+      icon: FaInstagram, 
+      href: 'https://www.instagram.com/vibes.unplugged2024?utm_source=qr&igsh=MXUxdjh1bHd2YnJ2cA==', 
+      label: 'Instagram', 
+      color: 'hover:text-pink-500',
+      bgColor: 'hover:bg-pink-500/20'
+    },
+    { 
+      icon: FaFacebook, 
+      href: 'https://www.facebook.com/profile.php?id=100086320209180', 
+      label: 'Facebook', 
+      color: 'hover:text-blue-500',
+      bgColor: 'hover:bg-blue-500/20'
+    },
+    { 
+      icon: FaYoutube, 
+      href: 'https://youtube.com/@vibes.unplugged?si=8rAACP7MgE6JmeDw', 
+      label: 'YouTube', 
+      color: 'hover:text-red-500',
+      bgColor: 'hover:bg-red-500/20'
+    },
+    { 
+      icon: FaLinkedin, 
+      href: 'https://www.linkedin.com/in/vishal-raj-08827b184?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
+      label: 'LinkedIn', 
+      color: 'hover:text-blue-600',
+      bgColor: 'hover:bg-blue-600/20'
+    },
+    { 
+      icon: FaTwitter, 
+      href: 'https://x.com/VishalRaj84424?t=JmKNOuHrOvVUT8zsOr5Bpw&s=08', 
+      label: 'Twitter/X', 
+      color: 'hover:text-gray-800',
+      bgColor: 'hover:bg-gray-800/20'
+    },
+    { 
+      icon: FaSpotify, 
+      href: '#', 
+      label: 'Spotify', 
+      color: 'hover:text-green-500',
+      bgColor: 'hover:bg-green-500/20'
+    },
   ];
 
   return (
-    <div className="pt-16 md:pt-20 font-body">
+    <div className="pt-16 md:pt-20 font-body bg-white">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-primary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,15 +131,16 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-secondary/20 text-secondary font-body font-medium text-sm rounded-full border border-secondary/30 backdrop-blur-sm">
-                📞 Get In Touch
+              <span className="inline-block px-6 py-3 bg-white/20 text-white font-body font-medium text-sm rounded-full border border-white/20 backdrop-blur-sm shadow-elegant">
+                <Sparkles className="inline w-4 h-4 mr-2" />
+                Get In Touch
               </span>
             </motion.div>
             
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-accent mb-6">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-accent/80 max-w-4xl mx-auto font-body leading-relaxed">
+            <p className="text-xl text-white/80 max-w-4xl mx-auto font-body leading-relaxed">
               Ready to start your next podcast project? Let's discuss how we can
               bring your vision to life with our professional production services.
             </p>
@@ -112,19 +149,19 @@ const Contact = () => {
 
         {/* Floating Elements */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"
           animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-highlight/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"
           animate={{ y: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 5, repeat: Infinity, delay: 1 }}
         />
       </section>
 
       {/* Contact Information */}
-      <section className="py-24 bg-gradient-accent section-divider">
+      <section className="py-24 bg-gradient-secondary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -145,14 +182,14 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
-                className="text-center bg-primary/5 backdrop-blur-sm p-8 rounded-2xl border border-primary/10 card-hover"
+                className="text-center bg-white/20 backdrop-blur-sm p-8 rounded-2xl border border-white/20 card-hover"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <info.icon className="w-8 h-8 text-accent" />
+                <div className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-elegant`}>
+                  <info.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-primary mb-4">
                   {info.title}
@@ -171,7 +208,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-24 bg-gradient-primary section-divider">
+      <section className="py-24 bg-gradient-cool section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -181,13 +218,13 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-heading font-bold text-accent mb-8">
+              <h3 className="text-3xl font-heading font-bold text-primary mb-8">
                 Send Us a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-accent font-body text-sm font-medium mb-2">
+                    <label className="block text-primary font-body text-sm font-medium mb-2">
                       Name
                     </label>
                     <input
@@ -196,12 +233,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-accent/10 border border-highlight/20 rounded-xl text-accent placeholder-accent/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm"
+                      className="w-full px-4 py-3 bg-white/50 border border-white/20 rounded-xl text-primary placeholder-primary/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm font-body"
                       placeholder="Your Name"
                     />
                   </div>
                   <div>
-                    <label className="block text-accent font-body text-sm font-medium mb-2">
+                    <label className="block text-primary font-body text-sm font-medium mb-2">
                       Email
                     </label>
                     <input
@@ -210,14 +247,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-accent/10 border border-highlight/20 rounded-xl text-accent placeholder-accent/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm"
+                      className="w-full px-4 py-3 bg-white/50 border border-white/20 rounded-xl text-primary placeholder-primary/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm font-body"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-accent font-body text-sm font-medium mb-2">
+                  <label className="block text-primary font-body text-sm font-medium mb-2">
                     Subject
                   </label>
                   <input
@@ -226,13 +263,13 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-accent/10 border border-highlight/20 rounded-xl text-accent placeholder-accent/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-white/50 border border-white/20 rounded-xl text-primary placeholder-primary/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all backdrop-blur-sm font-body"
                     placeholder="How can we help you?"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-accent font-body text-sm font-medium mb-2">
+                  <label className="block text-primary font-body text-sm font-medium mb-2">
                     Message
                   </label>
                   <textarea
@@ -241,7 +278,7 @@ const Contact = () => {
                     onChange={handleChange}
                     rows={6}
                     required
-                    className="w-full px-4 py-3 bg-accent/10 border border-highlight/20 rounded-xl text-accent placeholder-accent/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all resize-none backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-white/50 border border-white/20 rounded-xl text-primary placeholder-primary/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all resize-none backdrop-blur-sm font-body"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -267,12 +304,12 @@ const Contact = () => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="text-accent font-heading font-semibold mb-2">Quick Contact</h4>
-                    <p className="text-accent/70 font-body text-sm">Get instant response via WhatsApp</p>
+                    <h4 className="text-primary font-heading font-semibold mb-2">Quick Contact</h4>
+                    <p className="text-primary/70 font-body text-sm">Get instant response via WhatsApp</p>
                   </div>
                   <motion.button
                     onClick={handleWhatsAppClick}
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-body font-medium transition-all duration-300 flex items-center space-x-2 shadow-premium micro-bounce"
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-body font-medium transition-all duration-300 flex items-center space-x-2 shadow-elegant micro-bounce"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -292,27 +329,27 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div>
-                <h3 className="text-3xl font-heading font-bold text-accent mb-8">
+                <h3 className="text-3xl font-heading font-bold text-primary mb-8">
                   Find Our Studio
                 </h3>
-                <div className="bg-accent/10 backdrop-blur-sm rounded-2xl p-8 h-96 flex items-center justify-center border border-highlight/20">
+                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 h-96 flex items-center justify-center border border-white/20">
                   <div className="text-center">
-                    <MapPin className="w-20 h-20 text-highlight mx-auto mb-4" />
-                    <p className="text-accent font-body text-lg mb-2">
+                    <MapPin className="w-20 h-20 text-secondary mx-auto mb-4" />
+                    <p className="text-primary font-body text-lg mb-2">
                       Interactive Map Placeholder
                     </p>
-                    <p className="text-accent/60 font-body text-sm">
+                    <p className="text-primary/60 font-body text-sm">
                       Google Maps integration would be added here
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-highlight/20">
-                <h4 className="text-xl font-heading font-bold text-accent mb-6">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h4 className="text-xl font-heading font-bold text-primary mb-6">
                   Why Choose Us?
                 </h4>
-                <ul className="space-y-4 text-accent/80 font-body">
+                <ul className="space-y-4 text-primary/80 font-body">
                   {[
                     'Professional studio facilities',
                     'Experienced production team',
@@ -329,7 +366,7 @@ const Contact = () => {
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <div className="w-2 h-2 bg-secondary rounded-full" />
+                      <div className="w-2 h-2 bg-gradient-primary rounded-full" />
                       <span>{item}</span>
                     </motion.li>
                   ))}
@@ -341,7 +378,7 @@ const Contact = () => {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-24 bg-gradient-highlight section-divider">
+      <section className="py-24 bg-gradient-soft section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -362,7 +399,9 @@ const Contact = () => {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  className={`w-16 h-16 bg-primary/10 hover:bg-primary/20 rounded-2xl flex items-center justify-center transition-all duration-300 group border border-primary/20 ${social.color}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-16 h-16 bg-white/20 ${social.bgColor} rounded-2xl flex items-center justify-center transition-all duration-300 group border border-white/20 ${social.color} shadow-elegant`}
                   whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}

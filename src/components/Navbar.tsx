@@ -37,7 +37,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-primary/95 backdrop-blur-md shadow-premium border-b border-highlight/20' 
+          ? 'bg-white/95 backdrop-blur-md shadow-elegant border-b border-neutral-200' 
           : 'bg-transparent'
       }`}
     >
@@ -48,11 +48,13 @@ const Navbar = () => {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-              className="w-10 h-10 bg-gradient-to-br from-secondary to-contrast rounded-full flex items-center justify-center"
+              className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center shadow-elegant"
             >
-              <Mic2 className="w-6 h-6 text-accent" />
+              <Mic2 className="w-6 h-6 text-white" />
             </motion.div>
-            <span className="text-lg md:text-xl font-heading font-bold text-accent tracking-wide group-hover:text-highlight transition-colors duration-300">
+            <span className={`text-lg md:text-xl font-heading font-bold tracking-wide group-hover:text-secondary transition-colors duration-300 ${
+              scrolled ? 'text-primary' : 'text-white'
+            }`}>
               Master's Production
             </span>
           </Link>
@@ -65,26 +67,31 @@ const Navbar = () => {
                 to={item.path}
                 className={`relative px-4 py-2 text-sm font-body font-medium transition-all duration-300 rounded-lg group ${
                   location.pathname === item.path
-                    ? 'text-accent bg-gradient-to-r from-secondary/20 to-contrast/20 shadow-glow'
-                    : 'text-accent/80 hover:text-accent hover:bg-highlight/10'
+                    ? scrolled 
+                      ? 'text-primary bg-gradient-secondary shadow-soft'
+                      : 'text-white bg-white/20 shadow-elegant'
+                    : scrolled
+                      ? 'text-primary/80 hover:text-primary hover:bg-neutral-100'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <span className="relative z-10">{item.name}</span>
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary to-highlight rounded-full"
+                    className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
+                      scrolled ? 'bg-gradient-primary' : 'bg-white'
+                    }`}
                     initial={false}
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-highlight/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
             ))}
             
             {/* WhatsApp Button */}
             <motion.button
               onClick={handleWhatsAppClick}
-              className="ml-4 p-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full transition-all duration-300 group shadow-lg hover:shadow-xl"
+              className="ml-4 p-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full transition-all duration-300 group shadow-elegant"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -95,7 +102,11 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-accent/80 hover:text-accent transition-colors duration-300 rounded-lg hover:bg-highlight/10"
+            className={`md:hidden p-2 transition-colors duration-300 rounded-lg ${
+              scrolled 
+                ? 'text-primary/80 hover:text-primary hover:bg-neutral-100'
+                : 'text-white/80 hover:text-white hover:bg-white/10'
+            }`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -108,7 +119,7 @@ const Navbar = () => {
             height: isOpen ? 'auto' : 0, 
             opacity: isOpen ? 1 : 0 
           }}
-          className="md:hidden overflow-hidden bg-primary/95 backdrop-blur-md border-t border-highlight/20"
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-neutral-200"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
@@ -118,8 +129,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 text-base font-body font-medium transition-all duration-300 rounded-lg ${
                   location.pathname === item.path
-                    ? 'text-accent bg-gradient-to-r from-secondary/30 to-contrast/30 shadow-glow'
-                    : 'text-accent/80 hover:text-accent hover:bg-highlight/10'
+                    ? 'text-primary bg-gradient-secondary shadow-soft'
+                    : 'text-primary/80 hover:text-primary hover:bg-neutral-100'
                 }`}
               >
                 {item.name}
@@ -130,7 +141,7 @@ const Navbar = () => {
                 handleWhatsAppClick();
                 setIsOpen(false);
               }}
-              className="w-full mt-2 p-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-medium flex items-center justify-center space-x-2 transition-all duration-300"
+              className="w-full mt-2 p-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-medium flex items-center justify-center space-x-2 transition-all duration-300 shadow-elegant"
               whileTap={{ scale: 0.98 }}
             >
               <MessageCircle className="w-5 h-5" />

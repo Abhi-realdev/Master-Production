@@ -18,25 +18,29 @@ interface CreationsCarouselProps {
   creations: Creation[];
 }
 
-// Custom Arrow Components
+// Custom Arrow Components with elegant styling
 const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
-  <button
+  <motion.button
     onClick={onClick}
-    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-primary/80 hover:bg-secondary/90 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group shadow-premium border border-accent/20"
+    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-primary/20 hover:bg-primary/40 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group shadow-elegant border border-primary/20"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
     aria-label="Previous"
   >
-    <ChevronLeft className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
-  </button>
+    <ChevronLeft className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
+  </motion.button>
 );
 
 const CustomNextArrow = ({ onClick }: { onClick?: () => void }) => (
-  <button
+  <motion.button
     onClick={onClick}
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-primary/80 hover:bg-secondary/90 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group shadow-premium border border-accent/20"
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-primary/20 hover:bg-primary/40 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group shadow-elegant border border-primary/20"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
     aria-label="Next"
   >
-    <ChevronRight className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
-  </button>
+    <ChevronRight className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
+  </motion.button>
 );
 
 const CreationsCarousel: React.FC<CreationsCarouselProps> = ({ creations }) => {
@@ -51,6 +55,7 @@ const CreationsCarousel: React.FC<CreationsCarouselProps> = ({ creations }) => {
     pauseOnHover: true,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    lazyLoad: 'ondemand' as const,
     responsive: [
       {
         breakpoint: 1280,
@@ -86,7 +91,7 @@ const CreationsCarousel: React.FC<CreationsCarouselProps> = ({ creations }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative gpu-accelerated">
       <style jsx global>{`
         .creations-carousel .slick-track {
           display: flex;

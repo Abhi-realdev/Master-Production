@@ -1,45 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import TeamMember from '../components/TeamMember';
-import { Target, Eye, Award, Users, Star, TrendingUp, Globe } from 'lucide-react';
+import ModernTimeline from '../components/ModernTimeline';
+import { Target, Eye, Award, Users, Star, TrendingUp, Globe, Sparkles } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
     {
-      name: 'Alex Richardson',
-      position: 'Executive Producer & Founder',
-      bio: 'Award-winning producer with 15+ years in media production. Led productions for major political figures and administrative leaders.',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
+      name: 'Vishal Raj',
+      position: 'Founder & Executive Producer',
+      bio: 'Award-winning producer and host with expertise in creating compelling conversations with influential personalities.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.39 AM.jpeg',
     },
     {
-      name: 'Sarah Chen',
-      position: 'Creative Director',
-      bio: 'Visionary creative director specializing in compelling narratives. Former journalist with expertise in political communication.',
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg',
+      name: 'Vijaylaxmi Singh',
+      position: 'Co-Host & Legal Expert',
+      bio: 'Advocate and legal expert bringing professional insights and legal perspectives to every conversation.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.40 AM (1).jpeg',
     },
     {
-      name: 'Michael Torres',
-      position: 'Senior Audio Engineer',
-      bio: 'Technical expert ensuring pristine audio quality. Grammy-nominated engineer with experience in broadcast television.',
-      image: 'https://images.pexels.com/photos/3777947/pexels-photo-3777947.jpeg',
-    },
-    {
-      name: 'Jessica Park',
-      position: 'Video Director',
-      bio: 'Cinematographer and video director with a passion for visual storytelling. Specializes in high-profile interview setups.',
-      image: 'https://images.pexels.com/photos/6115756/pexels-photo-6115756.jpeg',
-    },
-    {
-      name: 'David Wilson',
-      position: 'Content Strategist',
-      bio: 'Strategic content planner with expertise in audience development and distribution. Former political communications advisor.',
-      image: 'https://images.pexels.com/photos/6114991/pexels-photo-6114991.jpeg',
-    },
-    {
-      name: 'Maria Rodriguez',
-      position: 'Guest Relations Manager',
-      bio: 'Expert in high-profile guest coordination and relationship management. Background in diplomatic and administrative protocols.',
-      image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+      name: 'Production Team',
+      position: 'Creative & Technical Support',
+      bio: 'Dedicated team of audio engineers and creative professionals ensuring pristine quality in every production.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.41 AM.jpeg',
     },
   ];
 
@@ -70,47 +53,8 @@ const About = () => {
     },
   ];
 
-  const milestones = [
-    {
-      year: '2018',
-      title: 'Foundation',
-      description: 'Master\'s Production was founded with a vision to create impactful podcast content.',
-      icon: Star,
-    },
-    {
-      year: '2019',
-      title: 'First Major Interview',
-      description: 'Conducted our first high-profile political interview, setting the tone for our future work.',
-      icon: Users,
-    },
-    {
-      year: '2020',
-      title: 'Studio Expansion',
-      description: 'Opened our state-of-the-art recording facilities with professional-grade equipment.',
-      icon: TrendingUp,
-    },
-    {
-      year: '2021',
-      title: 'Award Recognition',
-      description: 'Received multiple industry awards for excellence in podcast production.',
-      icon: Award,
-    },
-    {
-      year: '2022',
-      title: 'Digital Innovation',
-      description: 'Launched live streaming capabilities and enhanced digital distribution.',
-      icon: Globe,
-    },
-    {
-      year: '2023',
-      title: 'Global Reach',
-      description: 'Expanded operations to serve international clients and global audiences.',
-      icon: Target,
-    },
-  ];
-
   return (
-    <div className="pt-16 md:pt-20 font-body">
+    <div className="pt-16 md:pt-20 font-body bg-white">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-primary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,20 +70,21 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-6"
               >
-                <span className="inline-block px-4 py-2 bg-secondary/20 text-secondary font-body font-medium text-sm rounded-full border border-secondary/30 backdrop-blur-sm">
-                  🎯 Our Journey
+                <span className="inline-block px-6 py-3 bg-white/20 text-white font-body font-medium text-sm rounded-full border border-white/20 backdrop-blur-sm shadow-elegant">
+                  <Sparkles className="inline w-4 h-4 mr-2" />
+                  Our Journey
                 </span>
               </motion.div>
               
-              <h1 className="text-4xl md:text-6xl font-heading font-bold text-accent mb-6">
+              <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
                 About Master's Production
               </h1>
-              <p className="text-xl text-accent/90 font-body leading-relaxed mb-8">
+              <p className="text-xl text-white/90 font-body leading-relaxed mb-8">
                 We are a premier podcast production house dedicated to creating
                 exceptional content featuring influential personalities from the
                 worlds of politics, administration, and leadership.
               </p>
-              <p className="text-lg text-accent/80 font-body leading-relaxed">
+              <p className="text-lg text-white/80 font-body leading-relaxed">
                 Since our founding, we've built a reputation for excellence,
                 professionalism, and the ability to facilitate meaningful
                 conversations that matter to society.
@@ -154,7 +99,7 @@ const About = () => {
             >
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg"
+                  src="/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
                   alt="Master's Production Studio"
                   className="w-full h-96 object-cover rounded-2xl shadow-premium"
                   loading="eager"
@@ -163,7 +108,7 @@ const About = () => {
                 
                 {/* Floating Stats */}
                 <motion.div
-                  className="absolute -top-4 -right-4 bg-secondary text-accent p-4 rounded-2xl shadow-premium"
+                  className="absolute -top-4 -right-4 bg-gradient-primary text-white p-4 rounded-2xl shadow-premium"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
@@ -173,7 +118,7 @@ const About = () => {
                 </motion.div>
                 
                 <motion.div
-                  className="absolute -bottom-4 -left-4 bg-highlight text-primary p-4 rounded-2xl shadow-premium"
+                  className="absolute -bottom-4 -left-4 bg-gradient-accent text-primary p-4 rounded-2xl shadow-premium"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 1 }}
@@ -185,22 +130,10 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-xl"
-          animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-highlight/20 rounded-full blur-xl"
-          animate={{ y: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-        />
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gradient-accent section-divider">
+      <section className="py-24 bg-gradient-secondary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -221,14 +154,14 @@ const About = () => {
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                className="text-center bg-primary/5 backdrop-blur-sm p-8 rounded-2xl border border-primary/10 card-hover"
+                className="text-center bg-white/20 backdrop-blur-sm p-8 rounded-2xl border border-white/20 card-hover"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-contrast rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-elegant">
+                  <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-primary mb-4">
                   {value.title}
@@ -242,112 +175,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Journey Timeline Section */}
-      <section className="py-24 bg-gradient-primary section-divider">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-accent mb-4">
-              Our Creative Journey
-            </h2>
-            <p className="text-xl text-accent/80 font-body">
-              Follow our winding path of growth and innovation
-            </p>
-          </motion.div>
-
-          <div className="relative max-w-6xl mx-auto">
-            {/* Curved Snake Timeline Path */}
-            <svg
-              className="absolute inset-0 w-full h-full"
-              viewBox="0 0 800 1400"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.path
-                d="M100 80 Q200 120 300 100 T500 180 Q650 220 550 300 T350 420 Q200 460 400 540 T650 680 Q750 720 650 800 T400 920 Q300 960 500 1040 T700 1180 Q800 1220 700 1300"
-                stroke="url(#snakeGradient)"
-                strokeWidth="4"
-                fill="none"
-                strokeDasharray="10,5"
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 1 }}
-                transition={{ duration: 3, ease: "easeInOut" }}
-                viewport={{ once: true }}
-              />
-              <defs>
-                <linearGradient id="snakeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#E63946" />
-                  <stop offset="33%" stopColor="#A8DADC" />
-                  <stop offset="66%" stopColor="#457B9D" />
-                  <stop offset="100%" stopColor="#E63946" />
-                </linearGradient>
-              </defs>
-            </svg>
-
-            <div className="relative space-y-24">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  className={`relative flex items-center ${
-                    index % 3 === 0 ? 'justify-start' : 
-                    index % 3 === 1 ? 'justify-center' : 'justify-end'
-                  }`}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Animated Timeline Node */}
-                  <motion.div 
-                    className="absolute w-8 h-8 bg-gradient-to-r from-secondary to-highlight rounded-full z-10 shadow-premium border-4 border-accent"
-                    style={{
-                      left: index % 3 === 0 ? '12%' : 
-                            index % 3 === 1 ? '50%' : '88%',
-                      transform: 'translateX(-50%)'
-                    }}
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    <milestone.icon className="w-4 h-4 text-accent absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                  </motion.div>
-
-                  {/* Content */}
-                  <div
-                    className={`w-80 ${
-                      index % 3 === 0 ? 'mr-auto text-left' : 
-                      index % 3 === 1 ? 'mx-auto text-center' : 'ml-auto text-right'
-                    }`}
-                  >
-                    <motion.div 
-                      className="bg-gradient-to-br from-accent/10 to-highlight/10 backdrop-blur-sm p-8 rounded-2xl border border-highlight/20 shadow-premium card-hover"
-                      whileHover={{ scale: 1.05, y: -5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="text-3xl font-heading font-bold text-gradient-primary mb-3">
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-heading font-semibold text-accent mb-4">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-accent/80 font-body leading-relaxed">{milestone.description}</p>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Modern Timeline Section */}
+      <ModernTimeline />
 
       {/* Team Section */}
-      <section className="py-24 bg-gradient-highlight section-divider">
+      <section className="py-24 bg-gradient-soft section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -385,10 +217,10 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-accent mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
-            <p className="text-xl text-accent/80 mb-8 leading-relaxed font-body">
+            <p className="text-xl text-white/80 mb-8 leading-relaxed font-body">
               Whether you're looking to share your story or need professional
               podcast production services, we're here to make it happen.
             </p>

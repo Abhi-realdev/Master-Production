@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Users,
   Award,
+  Sparkles,
 } from 'lucide-react';
 
 const OurPodcast = () => {
@@ -19,54 +20,54 @@ const OurPodcast = () => {
 
   const podcasts = [
     {
-      title: 'Political Perspectives Weekly',
-      description: 'In-depth conversations with leading political figures and policy makers exploring current affairs and future visions.',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
+      title: 'Vibes Unplugged Podcast',
+      description: 'Engaging conversations with influential personalities from politics, administration, and leadership.',
+      image: '/WhatsApp Image 2025-08-10 at 10.43.21 AM.jpeg',
       duration: '45 min',
       episodes: 24,
     },
     {
-      title: 'Administrative Excellence Series',
-      description: 'Behind-the-scenes stories from top government administrators sharing insights on public service.',
-      image: 'https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg',
+      title: 'Professional Interview Series',
+      description: 'In-depth discussions with experts, advocates, and thought leaders.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.39 AM.jpeg',
       duration: '38 min',
       episodes: 18,
     },
     {
       title: 'Leadership Chronicles',
       description: 'Inspiring conversations with industry leaders and visionaries who are shaping the future.',
-      image: 'https://images.pexels.com/photos/6115756/pexels-photo-6115756.jpeg',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg',
       duration: '52 min',
       episodes: 31,
     },
     {
-      title: 'Policy Makers Roundtable',
-      description: 'Exclusive discussions on current policies and their impact on society and governance.',
-      image: 'https://images.pexels.com/photos/6114991/pexels-photo-6114991.jpeg',
+      title: 'Expert Conversations',
+      description: 'Deep dive discussions with legal experts, advocates, and policy makers.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.40 AM (1).jpeg',
       duration: '41 min',
       episodes: 15,
     },
     {
-      title: 'Democracy in Action',
-      description: 'Live coverage of major political events and democratic processes that shape our world.',
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg',
+      title: 'Behind the Scenes',
+      description: 'Exclusive look into our production process and the stories behind our content.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.41 AM.jpeg',
       duration: '35 min',
       episodes: 22,
     },
     {
-      title: 'Future of Governance',
-      description: 'Forward-thinking discussions on the evolution of public administration and digital governance.',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
+      title: 'Future of Media',
+      description: 'Forward-thinking discussions on the evolution of media and digital content.',
+      image: '/WhatsApp Image 2025-08-10 at 11.26.39 AM.jpeg',
       duration: '47 min',
       episodes: 12,
     },
   ];
 
   const stats = [
-    { icon: PlayCircle, number: '1M+', label: 'Monthly Listeners', color: 'from-secondary to-contrast' },
-    { icon: TrendingUp, number: '95%', label: 'Completion Rate', color: 'from-highlight to-contrast' },
-    { icon: Users, number: '500+', label: 'Featured Guests', color: 'from-contrast to-secondary' },
-    { icon: Award, number: '25+', label: 'Podcast Awards', color: 'from-secondary to-highlight' },
+    { icon: PlayCircle, number: '1M+', label: 'Monthly Listeners', color: 'from-blue-400 to-purple-500' },
+    { icon: TrendingUp, number: '95%', label: 'Completion Rate', color: 'from-green-400 to-blue-500' },
+    { icon: Users, number: '500+', label: 'Featured Guests', color: 'from-pink-400 to-red-400' },
+    { icon: Award, number: '25+', label: 'Podcast Awards', color: 'from-yellow-400 to-orange-500' },
   ];
 
   const features = [
@@ -93,7 +94,7 @@ const OurPodcast = () => {
   ];
 
   return (
-    <div className="pt-16 md:pt-20 font-body">
+    <div className="pt-16 md:pt-20 font-body bg-white">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-primary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,15 +110,16 @@ const OurPodcast = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-secondary/20 text-secondary font-body font-medium text-sm rounded-full border border-secondary/30 backdrop-blur-sm">
-                🎙️ Premium Podcast Collection
+              <span className="inline-block px-6 py-3 bg-white/20 text-white font-body font-medium text-sm rounded-full border border-white/20 backdrop-blur-sm shadow-elegant">
+                <Sparkles className="inline w-4 h-4 mr-2" />
+                Premium Podcast Collection
               </span>
             </motion.div>
             
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-accent mb-6">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
               Our Podcasts
             </h1>
-            <p className="text-xl text-accent/80 max-w-4xl mx-auto font-body leading-relaxed">
+            <p className="text-xl text-white/80 max-w-4xl mx-auto font-body leading-relaxed">
               Discover our collection of compelling podcasts featuring influential 
               personalities from politics, administration, and leadership. Each episode 
               brings you closer to the minds that shape our world.
@@ -127,19 +129,19 @@ const OurPodcast = () => {
 
         {/* Floating Elements */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"
           animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-highlight/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"
           animate={{ y: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 5, repeat: Infinity, delay: 1 }}
         />
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-accent section-divider">
+      <section className="py-20 bg-gradient-secondary section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -166,8 +168,8 @@ const OurPodcast = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-premium`}>
-                  <stat.icon className="w-10 h-10 text-accent" />
+                <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-elegant`}>
+                  <stat.icon className="w-10 h-10 text-white" />
                 </div>
                 <motion.div 
                   className="text-4xl md:text-5xl font-heading font-bold text-primary mb-2"
@@ -186,7 +188,7 @@ const OurPodcast = () => {
       </section>
 
       {/* Podcasts Grid */}
-      <section className="py-24 bg-gradient-highlight section-divider">
+      <section className="py-24 bg-gradient-cool section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -232,7 +234,7 @@ const OurPodcast = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-primary section-divider">
+      <section className="py-24 bg-gradient-soft section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -241,10 +243,10 @@ const OurPodcast = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-accent mb-4">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
               Why Our Podcasts Stand Out
             </h2>
-            <p className="text-xl text-accent/80 font-body">
+            <p className="text-xl text-primary/70 font-body">
               Professional production meets compelling content
             </p>
           </motion.div>
@@ -253,17 +255,17 @@ const OurPodcast = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                className="text-center bg-accent/10 backdrop-blur-sm p-8 rounded-2xl border border-highlight/20 card-hover"
+                className="text-center bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-white/20 card-hover"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <feature.icon className="w-16 h-16 text-highlight mx-auto mb-6" />
-                <h3 className="text-xl font-heading font-semibold text-accent mb-4">
+                <feature.icon className="w-16 h-16 text-secondary mx-auto mb-6" />
+                <h3 className="text-xl font-heading font-semibold text-primary mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-accent/70 font-body text-sm leading-relaxed">
+                <p className="text-primary/70 font-body text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -273,7 +275,7 @@ const OurPodcast = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-gradient-accent section-divider">
+      <section className="py-24 bg-gradient-primary section-divider">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -281,16 +283,16 @@ const OurPodcast = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
               Ready to Start Your Podcast?
             </h2>
-            <p className="text-xl text-primary/70 mb-8 leading-relaxed font-body">
+            <p className="text-xl text-white/80 mb-8 leading-relaxed font-body">
               Whether you're looking to share your story or need professional
               podcast production services, we're here to make it happen.
             </p>
             <motion.button
               onClick={() => setIsModalOpen(true)}
-              className="btn-primary px-8 py-4 text-lg font-heading font-semibold rounded-xl micro-bounce"
+              className="btn-secondary px-8 py-4 text-lg font-heading font-semibold rounded-xl micro-bounce"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

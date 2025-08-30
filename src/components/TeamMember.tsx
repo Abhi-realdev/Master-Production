@@ -18,7 +18,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-gradient-to-br from-primary/10 to-highlight/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-premium group border border-primary/20 card-hover"
+      className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-elegant group border border-white/20 card-hover"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
@@ -28,8 +28,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lazy-image"
           loading="lazy"
+          onLoad={(e) => e.currentTarget.classList.add('loaded')}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -37,11 +38,11 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div className="text-center w-full">
             <motion.div
-              className="w-12 h-12 bg-gradient-to-r from-secondary to-highlight rounded-full mx-auto mb-3 flex items-center justify-center"
+              className="w-12 h-12 bg-gradient-accent rounded-full mx-auto mb-3 flex items-center justify-center shadow-elegant"
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-accent font-heading font-bold text-lg">
+              <span className="text-primary font-heading font-bold text-lg">
                 {name.split(' ').map(n => n[0]).join('')}
               </span>
             </motion.div>
