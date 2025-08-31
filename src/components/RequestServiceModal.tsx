@@ -116,10 +116,11 @@ const RequestServiceModal: React.FC<RequestServiceModalProps> = ({
                   >
                     <option value="">Select Service</option>
                     <option value="podcast-production">Podcast Production</option>
-                    <option value="video-editing">Video Editing</option>
+                    <option value="interview-setup">Interview Setup</option>
                     <option value="recording-studio">Recording Studio</option>
                     <option value="live-streaming">Live Streaming</option>
                     <option value="content-strategy">Content Strategy</option>
+                    <option value="digital-marketing">Digital Marketing</option>
                   </select>
                 </div>
 

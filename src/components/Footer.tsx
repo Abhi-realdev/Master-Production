@@ -60,19 +60,19 @@ const Footer = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+91 96287 87500',
       color: 'text-blue-400'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'hello@mastersproduction.com',
+      details: 'vibes.unplugged2024@gmail.com',
       color: 'text-green-400'
     },
     {
       icon: MapPin,
-      title: 'Location',
-      details: 'Los Angeles, CA',
+      title: 'Address',
+      details: 'Nirala Nagar, Ballia, UP',
       color: 'text-purple-400'
     },
   ];
@@ -87,9 +87,9 @@ const Footer = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+1234567890';
+    const phoneNumber = '+919628787500';
     const message = encodeURIComponent('Hello! I\'m interested in your podcast production services.');
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

@@ -43,9 +43,13 @@ const Navbar = () => {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-              className="w-10 h-10 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full flex items-center justify-center shadow-elegant"
+              className="w-12 h-12 rounded-full overflow-hidden shadow-elegant border-2 border-amber-400/30"
             >
-              <Mic2 className="w-6 h-6 text-white" />
+              <img 
+                src="/images/banner.png" 
+                alt="Master's Production Logo" 
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             <span className={`text-lg md:text-xl font-heading font-bold tracking-wide transition-colors duration-300 text-white`}>
