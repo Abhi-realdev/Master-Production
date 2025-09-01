@@ -106,8 +106,12 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center shadow-elegant">
-                <Mic2 className="w-7 h-7 text-primary" />
+              <div className="w-12 h-12 rounded-full overflow-hidden shadow-elegant border-2 border-white/20">
+                <img 
+                  src="/images/logo.png" 
+                  alt="Master's Production Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-2xl font-heading font-bold text-white">Master's Production</span>
             </motion.div>

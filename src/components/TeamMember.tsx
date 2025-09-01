@@ -18,19 +18,23 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-elegant group border border-white/20 card-hover"
+      className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-elegant group cursor-pointer border border-white/20 hover:border-primary/30 transition-all duration-500"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
+      whileHover={{ 
+        scale: 1.03,
+        y: -8,
+        boxShadow: "0 20px 40px rgba(26, 32, 44, 0.15)"
+      }}
     >
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-64 overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lazy-image"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           loading="lazy"
-          onLoad={(e) => e.currentTarget.classList.add('loaded')}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -50,14 +54,14 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors duration-300">
+      <div className="p-5">
+        <h3 className="text-lg font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors duration-300">
           {name}
         </h3>
-        <p className="text-secondary font-body font-medium mb-3 text-sm">
+        <p className="text-secondary font-body font-medium mb-3 text-xs">
           {position}
         </p>
-        <p className="text-primary/70 font-body text-sm leading-relaxed">
+        <p className="text-primary/70 font-body text-xs leading-relaxed line-clamp-3">
           {bio}
         </p>
       </div>
