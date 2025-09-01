@@ -9,7 +9,7 @@ const About = () => {
   const teamMembers = [
     {
       name: 'Vishal Raj',
-      position: 'Founder & Executive Producer',
+      position: 'Founder & Director',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
       image: '/images/team_vishal.jpeg',
     },
@@ -124,7 +124,7 @@ const About = () => {
             >
               <div className="relative">
                 <img
-                  src="/images/WhatsApp Image 2025-08-10 at 11.26.40 AM.jpeg"
+                  src="/images/photo2.jpeg"
                   alt="Master's Production Studio"
                   className="w-full h-96 object-cover rounded-2xl shadow-premium"
                   loading="eager"
