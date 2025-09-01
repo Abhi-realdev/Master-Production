@@ -221,7 +221,6 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <TeamMember
@@ -250,7 +249,6 @@ const About = () => {
               Whether you're looking to share your story or need professional
               podcast production services, we're here to make it happen.
             </p>
-            <motion.button
             <Link to="/contact">
               <motion.button
                 className="btn-secondary px-8 py-4 text-lg font-heading font-semibold rounded-xl micro-bounce"
