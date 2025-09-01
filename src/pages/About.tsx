@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import TeamMember from '../components/TeamMember';
 import ModernTimeline from '../components/ModernTimeline';
 import { Target, Eye, Award, Users, Star, TrendingUp, Globe, Sparkles } from 'lucide-react';
@@ -9,20 +10,44 @@ const About = () => {
     {
       name: 'Vishal Raj',
       position: 'Founder & Executive Producer',
-      bio: 'Award-winning producer and host with expertise in creating compelling conversations with influential personalities.',
-      image: '/WhatsApp Image 2025-08-10 at 11.26.39 AM.jpeg',
+      bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
+      image: '/images/team_vishal.jpeg',
     },
     {
-      name: 'Vijaylaxmi Singh',
-      position: 'Co-Host & Legal Expert',
-      bio: 'Advocate and legal expert bringing professional insights and legal perspectives to every conversation.',
-      image: '/WhatsApp Image 2025-08-10 at 11.26.40 AM (1).jpeg',
+      name: 'Vishal Singh',
+      position: 'Podcast Co-Host',
+      bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
+      image: '/images/team_vishal_singh.jpeg',
     },
     {
-      name: 'Production Team',
-      position: 'Creative & Technical Support',
-      bio: 'Dedicated team of audio engineers and creative professionals ensuring pristine quality in every production.',
-      image: '/WhatsApp Image 2025-08-10 at 11.26.41 AM.jpeg',
+      name: 'Manish Zain',
+      position: 'Chief Video Editor',
+      bio: 'Expert video editor with years of experience in creating visually stunning content and seamless post-production.',
+      image: '/images/team_manish.png',
+    },
+    {
+      name: 'Rajesh Vikram',
+      position: 'Content Analyst',
+      bio: 'Strategic content analyst ensuring quality, relevance, and impact in every podcast episode and production.',
+      image: '/images/team_rajesh.jpg',
+    },
+    {
+      name: 'Janvi Singh',
+      position: 'Content Researcher',
+      bio: 'Dedicated researcher who ensures every interview is well-prepared with thorough background analysis and insights.',
+      image: '/images/photo.jpeg',
+    },
+    {
+      name: 'Avishek Singh',
+      position: 'Edit & Motiongrapher',
+      bio: 'Creative motion graphics specialist and editor bringing visual storytelling to life with innovative design.',
+      image: '/images/photo1.jpeg',
+    },
+    {
+      name: 'Abhimanyu Desai',
+      position: 'IT & Digital Media Manager',
+      bio: 'Technology expert managing our digital infrastructure and ensuring seamless online presence and distribution.',
+      image: '/images/team_abhimanyu.png',
     },
   ];
 
@@ -197,6 +222,7 @@ const About = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <TeamMember
                 key={member.name}
@@ -225,12 +251,15 @@ const About = () => {
               podcast production services, we're here to make it happen.
             </p>
             <motion.button
-              className="btn-secondary px-8 py-4 text-lg font-heading font-semibold rounded-xl micro-bounce"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                className="btn-secondary px-8 py-4 text-lg font-heading font-semibold rounded-xl micro-bounce"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get In Touch
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
