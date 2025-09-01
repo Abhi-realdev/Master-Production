@@ -59,19 +59,19 @@ const Home = () => {
       name: 'Vishal Raj',
       position: 'Founder & Executive Producer',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
-      image: '/images/team_vishal.jpeg',
+      image: 'public/images/team_vishal.jpeg',
     },
     {
       name: 'Vishal Singh',
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
-      image: '/images/team_vishal_singh.jpeg',
+      image: 'public/images/team_vishal_singh.jpeg',
     },
     {
       name: 'Rajesh Vikram',
       position: 'Content Analyst',
       bio: 'Expert content analyst ensuring quality and relevance in every podcast episode.',
-      image: '/images/team_rajesh.jpg',
+      image: 'public/images/team_rajesh.jpg',
     },
   ];
 
