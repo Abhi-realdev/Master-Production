@@ -11,43 +11,43 @@ const About = () => {
       name: 'Vishal Raj',
       position: 'Founder & Director',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
-      image: '/images/team_vishal.jpeg',
+      image: 'public/images/team_vishal.jpeg',
     },
     {
       name: 'Vishal Singh',
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
-      image: '/images/team_vishal_singh.jpeg',
+      image: 'public/images/team_vishal_singh.jpeg',
     },
     {
       name: 'Manish Zain',
       position: 'Chief Video Editor',
       bio: 'Expert video editor with years of experience in creating visually stunning content and seamless post-production.',
-      image: '/images/team_manish.png',
+      image: 'public/images/team_manish.png',
     },
     {
       name: 'Rajesh Vikram',
       position: 'Content Analyst',
       bio: 'Strategic content analyst ensuring quality, relevance, and impact in every podcast episode and production.',
-      image: '/images/team_rajesh.jpg',
+      image: 'public/images/team_rajesh.jpg',
     },
     {
       name: 'Janvi Singh',
       position: 'Content Researcher',
       bio: 'Dedicated researcher who ensures every interview is well-prepared with thorough background analysis and insights.',
-      image: '/images/photo.jpeg',
+      image: 'public/images/photo.jpeg',
     },
     {
       name: 'Avishek Singh',
       position: 'Edit & Motiongrapher',
       bio: 'Creative motion graphics specialist and editor bringing visual storytelling to life with innovative design.',
-      image: '/images/photo1.jpeg',
+      image: 'public/images/photo4.jpeg',
     },
     {
       name: 'Abhimanyu Desai',
       position: 'IT & Digital Media Manager',
       bio: 'Technology expert managing our digital infrastructure and ensuring seamless online presence and distribution.',
-      image: '/images/team_abhimanyu.png',
+      image: 'public/images/team_abhimanyu.png',
     },
   ];
 
@@ -116,43 +116,54 @@ const About = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="relative">
-                <img
-                  src="/images/photo2.jpeg"
-                  alt="Master's Production Studio"
-                  className="w-full h-96 object-cover rounded-2xl shadow-premium"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl" />
-                
-                {/* Floating Stats */}
-                <motion.div
-                  className="absolute -top-4 -right-4 bg-gradient-primary text-white p-4 rounded-2xl shadow-premium"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
-                  <div className="text-2xl font-heading font-bold">500+</div>
-                  <div className="text-sm font-body">Interviews</div>
-                </motion.div>
-                
-                <motion.div
-                  className="absolute -bottom-4 -left-4 bg-gradient-accent text-primary p-4 rounded-2xl shadow-premium"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1 }}
-                >
-                  <div className="text-2xl font-heading font-bold">50+</div>
-                  <div className="text-sm font-body">Awards</div>
-                </motion.div>
-              </div>
-            </motion.div>
+           <motion.div
+  className="relative"
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+    {/* Blurred background */}
+    <img
+      src="public/images/photo3.jpeg"
+      alt="background blurred"
+      className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110"
+    />
+
+    {/* Foreground sharp image */}
+    <img
+      src="public/images/photo3.jpeg"
+      alt="Master's Production Studio"
+      className="relative w-full h-96 object-contain rounded-2xl shadow-premium z-10"
+      loading="eager"
+    />
+
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl z-20" />
+
+    {/* Floating Stats */}
+    <motion.div
+      className="absolute -top-4 -right-4 bg-gradient-primary text-white p-4 rounded-2xl shadow-premium z-30"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.8 }}
+    >
+      <div className="text-2xl font-heading font-bold">500+</div>
+      <div className="text-sm font-body">Interviews</div>
+    </motion.div>
+
+    <motion.div
+      className="absolute -bottom-4 -left-4 bg-gradient-accent text-primary p-4 rounded-2xl shadow-premium z-30"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 1 }}
+    >
+      <div className="text-2xl font-heading font-bold">50+</div>
+      <div className="text-sm font-body">Awards</div>
+    </motion.div>
+  </div>
+</motion.div>
+
           </div>
         </div>
       </section>
