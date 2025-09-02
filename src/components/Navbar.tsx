@@ -46,7 +46,7 @@ const Navbar = () => {
               className="w-12 h-12 rounded-full overflow-hidden shadow-elegant border-2 border-amber-400/30"
             >
               <img 
-                src="/images/logo.png" 
+                src="images/logo.png" 
                 alt="Master's Production Logo" 
                 className="w-full h-full object-cover"
               />
