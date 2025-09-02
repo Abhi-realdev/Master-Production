@@ -59,19 +59,19 @@ const Home = () => {
       name: 'Vishal Raj',
       position: 'Founder & Executive Producer',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
-      image: 'public/images/team3.jpeg',
+      image: 'images/team3.jpeg',
     },
     {
       name: 'Vishal Singh',
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
-      image: 'public/images/team_vishal_singh1.jpeg',
+      image: 'images/team_vishal_singh1.jpeg',
     },
     {
       name: 'Rajesh Vikram',
       position: 'Content Analyst',
       bio: 'Expert content analyst ensuring quality and relevance in every podcast episode.',
-      image: 'public/images/team_rajesh1.jpg',
+      image: 'images/team_rajesh1.jpg',
     },
   ];
 
@@ -94,7 +94,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-elegant">
         <div className="absolute inset-0">
           <img
-            src="public/images/banner_5.png"
+            src="images/banner_5.png"
             alt="Master's Production Studio"
             className="w-full h-full object-fit:contain opacity-40"
             loading="eager"
@@ -335,7 +335,7 @@ const Home = () => {
       <section className="py-24 bg-gradient-cool section-divider relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="public/images/team_vishal.jpeg"
+            src="images/team_vishal.jpeg"
             alt="Our Story Background"
             className="w-full h-full object-contain opacity-10"
             loading="lazy"
@@ -395,14 +395,14 @@ const Home = () => {
   <div className="relative w-full h-96 rounded-2xl overflow-hidden">
     {/* Blurred background */}
     <img
-      src="public/images/photo3.jpeg"
+      src="images/photo3.jpeg"
       alt="background blurred"
       className="absolute inset-0 w-full h-full object-cover blur-3xl scale-110"
     />
 
     {/* Foreground sharp image */}
     <img
-      src="public/images/photo3.jpeg"
+      src="images/photo3.jpeg"
       alt="Master's Production Studio"
       className="relative w-full h-96 object-contain rounded-2xl shadow-premium z-10"
       loading="eager"
