@@ -11,43 +11,43 @@ const About = () => {
       name: 'Vishal Raj',
       position: 'Founder & Director',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
-      image: 'public/images/team_vishal.jpeg',
+      image: 'images/team_vishal.jpeg',
     },
     {
       name: 'Vishal Singh',
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
-      image: 'public/images/team_vishal_singh.jpeg',
+      image: 'images/team_vishal_singh.jpeg',
     },
     {
       name: 'Manish Zain',
       position: 'Chief Video Editor',
       bio: 'Expert video editor with years of experience in creating visually stunning content and seamless post-production.',
-      image: 'public/images/team_manish.png',
+      image: 'images/team_manish.png',
     },
     {
       name: 'Rajesh Vikram',
       position: 'Content Analyst',
       bio: 'Strategic content analyst ensuring quality, relevance, and impact in every podcast episode and production.',
-      image: 'public/images/team_rajesh.jpg',
+      image: 'images/team_rajesh.jpg',
     },
     {
       name: 'Janvi Singh',
       position: 'Content Researcher',
       bio: 'Dedicated researcher who ensures every interview is well-prepared with thorough background analysis and insights.',
-      image: 'public/images/photo.jpeg',
+      image: 'images/photo.jpeg',
     },
     {
       name: 'Avishek Singh',
       position: 'Edit & Motiongrapher',
       bio: 'Creative motion graphics specialist and editor bringing visual storytelling to life with innovative design.',
-      image: 'public/images/photo4.jpeg',
+      image: 'images/photo4.jpeg',
     },
     {
       name: 'Abhimanyu Desai',
       position: 'IT & Digital Media Manager',
       bio: 'Technology expert managing our digital infrastructure and ensuring seamless online presence and distribution.',
-      image: 'public/images/team_abhimanyu.png',
+      image: 'images/team_abhimanyu.png',
     },
   ];
 
@@ -125,14 +125,14 @@ const About = () => {
   <div className="relative w-full h-96 rounded-2xl overflow-hidden">
     {/* Blurred background */}
     <img
-      src="public/images/photo3.jpeg"
+      src="images/photo3.jpeg"
       alt="background blurred"
       className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110"
     />
 
     {/* Foreground sharp image */}
     <img
-      src="public/images/photo3.jpeg"
+      src="images/photo3.jpeg"
       alt="Master's Production Studio"
       className="relative w-full h-96 object-contain rounded-2xl shadow-premium z-10"
       loading="eager"
