@@ -14,42 +14,42 @@ const Home = () => {
       id: 1,
       title: 'Vibes Unplugged Podcast',
       description: 'Exclusive conversations with influential personalities',
-      image: '/images/Banner1.jpeg',
+      image: 'public/images/Banner1.jpeg',
       type: 'image' as const,
     },
     {
       id: 2,
       title: 'Professional Studio Setup',
       description: 'State-of-the-art recording facilities',
-      image: '/images/Banner2.jpeg',
+      image: 'public/images/Banner2.jpeg',
       type: 'image' as const,
     },
     {
       id: 3,
       title: 'Expert Interviews',
       description: 'In-depth conversations with industry leaders',
-      image: '/images/Banner3.jpeg',
+      image: 'public/images/Banner3.jpeg',
       type: 'image' as const,
     },
     {
       id: 4,
       title: 'Behind the Scenes',
       description: 'Professional podcast production process',
-      image: '/images/Banner4.jpeg',
+      image: 'public/images/Banner4.jpeg',
       type: 'image' as const,
     },
     {
       id: 5,
       title: 'Premium Content Creation',
       description: 'High-quality production standards',
-      image: '/images/banner5.jpeg',
+      image: 'public/images/banner5.jpeg',
       type: 'image' as const,
     },
     {
       id: 6,
       title: 'Professional Excellence',
       description: 'Award-winning podcast production',
-      image: '/images/banner6.jpeg',
+      image: 'public/images/banner6.jpeg',
       type: 'image' as const,
     },
   ];
@@ -59,19 +59,19 @@ const Home = () => {
       name: 'Vishal Raj',
       position: 'Founder & Executive Producer',
       bio: 'Founder & Director with expertise in creating compelling conversations with influential personalities.',
-      image: 'public/images/team_vishal.jpeg',
+      image: 'public/images/team3.jpeg',
     },
     {
       name: 'Vishal Singh',
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
-      image: 'public/images/team_vishal_singh.jpeg',
+      image: 'public/images/team_vishal_singh1.jpeg',
     },
     {
       name: 'Rajesh Vikram',
       position: 'Content Analyst',
       bio: 'Expert content analyst ensuring quality and relevance in every podcast episode.',
-      image: 'public/images/team_rajesh.jpg',
+      image: 'public/images/team_rajesh1.jpg',
     },
   ];
 
@@ -94,9 +94,9 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-elegant">
         <div className="absolute inset-0">
           <img
-            src="/images/banner.png"
+            src="public/images/banner_5.png"
             alt="Master's Production Studio"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-fit:contain opacity-40"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/90" />
@@ -335,9 +335,9 @@ const Home = () => {
       <section className="py-24 bg-gradient-cool section-divider relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/photo1.jpeg"
+            src="public/images/team_vishal.jpeg"
             alt="Our Story Background"
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-contain opacity-10"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5" />
@@ -387,45 +387,53 @@ const Home = () => {
             </motion.div>
             
             <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <img
-                  src="/images/photo2.jpeg"
-                  alt="Our Studio"
-                  className="w-full h-96 object-cover rounded-2xl shadow-premium"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl" />
-                
-                {/* Floating Stats */}
-                <motion.div
-                  className="absolute -top-4 -right-4 bg-gradient-primary text-white p-4 rounded-2xl shadow-premium"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-2xl font-heading font-bold">500+</div>
-                  <div className="text-sm font-body">Interviews</div>
-                </motion.div>
-                
-                <motion.div
-                  className="absolute -bottom-4 -left-4 bg-gradient-accent text-primary p-4 rounded-2xl shadow-premium"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-2xl font-heading font-bold">50+</div>
-                  <div className="text-sm font-body">Awards</div>
-                </motion.div>
-              </div>
-            </motion.div>
+  className="relative"
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+    {/* Blurred background */}
+    <img
+      src="public/images/photo3.jpeg"
+      alt="background blurred"
+      className="absolute inset-0 w-full h-full object-cover blur-3xl scale-110"
+    />
+
+    {/* Foreground sharp image */}
+    <img
+      src="public/images/photo3.jpeg"
+      alt="Master's Production Studio"
+      className="relative w-full h-96 object-contain rounded-2xl shadow-premium z-10"
+      loading="eager"
+    />
+
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl z-20" />
+
+    {/* Floating Stats */}
+    <motion.div
+      className="absolute -top-4 -right-4 bg-gradient-primary text-white p-4 rounded-2xl shadow-premium z-30"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.8 }}
+    >
+      <div className="text-2xl font-heading font-bold">500+</div>
+      <div className="text-sm font-body">Interviews</div>
+    </motion.div>
+
+    <motion.div
+      className="absolute -bottom-4 -left-4 bg-gradient-accent text-primary p-4 rounded-2xl shadow-premium z-30"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 1 }}
+    >
+      <div className="text-2xl font-heading font-bold">50+</div>
+      <div className="text-sm font-body">Awards</div>
+    </motion.div>
+  </div>
+</motion.div>
+
           </div>
         </div>
       </section>
