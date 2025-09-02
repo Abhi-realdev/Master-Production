@@ -108,7 +108,7 @@ const Footer = () => {
             >
               <div className="w-12 h-12 rounded-full overflow-hidden shadow-elegant border-2 border-white/20">
                 <img 
-                  src="/images/logo.png" 
+                  src="images/logo.png" 
                   alt="Master's Production Logo" 
                   className="w-full h-full object-cover"
                 />
