@@ -43,7 +43,7 @@ const OurPodcast = () => {
     {
       title: 'Expert Conversations',
       description: 'Deep dive discussions with legal experts, advocates, and policy makers.',
-      image: 'public/images/Banner4.jpeg',
+      image: '/images/Banner4.jpeg',
       duration: '41 min',
       episodes: 15,
     },

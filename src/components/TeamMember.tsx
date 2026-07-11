@@ -7,6 +7,7 @@ interface TeamMemberProps {
   bio: string;
   image: string;
   delay?: number;
+  imageStyle?: React.CSSProperties;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -15,6 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   bio,
   image,
   delay = 0,
+  imageStyle,
 }) => {
   return (
     <motion.div
@@ -33,7 +35,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+          style={imageStyle}
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

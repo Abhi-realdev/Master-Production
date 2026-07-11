@@ -18,6 +18,7 @@ const About = () => {
       position: 'Podcast Co-Host',
       bio: 'Experienced co-host bringing dynamic energy and professional insights to every conversation.',
       image: 'images/team_vishal_singh.jpeg',
+      imageStyle: { objectPosition: 'center 20%', transform: 'scale(0.9)' }
     },
     {
       name: 'Manish Zain',
@@ -41,7 +42,7 @@ const About = () => {
       name: 'Avishek Singh',
       position: 'Edit & Motiongrapher',
       bio: 'Creative motion graphics specialist and editor bringing visual storytelling to life with innovative design.',
-      image: 'images/photo4.jpeg',
+      image: 'images/photo1.jpeg',
     },
     {
       name: 'Abhimanyu Desai',
@@ -123,18 +124,11 @@ const About = () => {
   transition={{ duration: 0.8, delay: 0.2 }}
 >
   <div className="relative w-full h-96 rounded-2xl overflow-hidden">
-    {/* Blurred background */}
+    {/* Main Story Image */}
     <img
-      src="images/photo3.jpeg"
-      alt="background blurred"
-      className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110"
-    />
-
-    {/* Foreground sharp image */}
-    <img
-      src="images/photo3.jpeg"
+      src="images/our_story.jpeg"
       alt="Master's Production Studio"
-      className="relative w-full h-96 object-contain rounded-2xl shadow-premium z-10"
+      className="absolute inset-0 w-full h-full object-cover object-center z-10"
       loading="eager"
     />
 
